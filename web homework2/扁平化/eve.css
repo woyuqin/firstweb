@@ -1,0 +1,127 @@
+
+a:link{color:black}
+a:hover {color:black;font-size:150%;}
+a{text-decoration:none}
+.top {
+    background: none repeat scroll 0 0 white;
+    color: silver;
+    font-family: "sorts-mill-goudy";
+    font-size: 11px;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    height: 70px;
+    width: 100%
+}
+
+#d1 {
+    background: none repeat scroll 0 0 white;
+    display: inline;
+    float: right;
+    font-family: "brandon-grotesque",sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    padding: 15px 0 15px;
+    position: absolute;
+    top: 5px;
+    width: 605px;
+    z-index: 10000;
+    text-align: center;
+}
+.img1{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	top: 10px;
+	left: 0px;
+}
+
+.menu{
+padding: 20px,0px,30px,0px;
+background-color: none;
+width: 700px;
+height: 70px;
+position:absolute;
+right: 400px;
+top:1px;
+}
+.menu1 ul {
+    text-align: center;
+}
+.menu1 li {
+    display: inline-block;
+    height: 50px;
+    width: 160px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#design{
+    width: 200px;
+    height:200px;
+	position: absolute;
+	top: 200px;
+	left: 40%;
+}
+.cont{
+width: 100%
+
+}
+.clear{
+    clear: both;
+}
+.cont #one{
+	display:  inline;
+	position: relative;
+	left: 180px;
+	top: 60px;
+
+}
+.cont #two{
+	display: inline;
+	position: relative;
+	left:180px;
+	top: 60px;
+
+}
+.cont #three{
+display: inline;
+position: relative;
+left: 180px;
+top: 60px;
+}
+.cont #four{
+display: inline;
+position: relative;
+left: 180px;
+top: 60px;
+}
+.cont #five{
+display: inline;
+position: relative;
+left: 180px;
+top: 60px;
+}
+footer {
+    background: none repeat scroll 0 0 #dfdfde;
+    padding: 120px 0;
+    position: relative;
+    text-align: center;
+    font-family: "brandon-grotesque",sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+footer h4  {
+    margin-bottom: 10px;
+}
+footer .email {
+
+    color: #84817c;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+

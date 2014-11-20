@@ -1,0 +1,140 @@
+body{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+    background: #F8F8FF
+
+}
+li{
+	list-style: none
+}
+a{
+	text-decoration: none;
+}
+.top{
+    background-color: #666666;
+    height: 36px;
+    position: relative;
+    width: auto;
+}
+.topct {
+    height: 36px;
+    margin: 0 auto;
+    width: 980px;
+}
+.topct ul li {
+    float: left;
+    height: 36px;
+    list-style: none;
+    text-align:  center;
+    line-height:  200%
+
+}
+.topct ul li a {
+    color: #ccc;
+    display: block;
+    height: 36px;
+    padding: 0 22px;
+}
+.weixin
+{
+    height: 26px;
+    margin-right: 18px;
+    position: relative;
+    float: right;
+    width: 23px;
+}
+
+#menu{
+    background-color: #CCCCFF;
+    height: 36px;
+    position: relative;
+    width: auto;
+}
+.nav {
+    height: 36px;
+    margin: 0 auto;
+    width: 980px;
+}
+.nav ul li {
+    float: left;
+    height: 36px;
+    list-style: none;
+    text-align:  center;
+    line-height:  200%
+
+}
+.nav ul li a {
+    color: #000000;
+    display: block;
+    height: 36px;
+    padding: 0 22px;
+    font-weight:bold;
+}
+
+
+#table {
+    background: url("img/hw_000486.jpg") repeat-x ;
+    height: 312px;
+    margin: 0 auto;
+    width: auto 0;
+}
+#table a {
+    background: url("img/hw_089235.png") repeat-x ;
+    display: inline-block;
+    float: left;
+    height: 137px;
+    margin: 12px 12px 0 0;
+    padding: 0;
+    width: 316px;
+}
+#table a span {
+    float: left;
+    height: 107px;
+    overflow: hidden;
+    padding: 13px 10px 15px;
+    width: 185px;
+    background-color:#CCFFFF;
+}
+#table a img {
+    float: right;
+    height: 137px;
+    width: 110px;
+}
+#table a span h4 {
+    font-family: microsoft yahei;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+#table a span p {
+    color: #646464;
+    font-size: 12px;
+    line-height: 120%;
+}
+#table a span.first {
+    background: url("img/hw_089243.png") no-repeat;
+}
+#table a span h4.c_blue {
+    color: #3686ab;
+}
+#table a span h4.c_orange {
+    color: #eb8800;
+}
+#table a span h4.c_green {
+    color: #679800;
+}
+#table a.last {
+    margin-right: 0;
+}
+#table a, #table a:hover {
+    text-decoration: none;
+}
+
+.bound {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 980px;
+}
+
