@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*
+	{
+		padding:0px;
+		margin:0px;
+	}
+	#slide
+	{
+		position:relative;
+	}
+	#slide_title
+	{
+		list-style-type:none;
+		width: 340px;
+		height: 37px;
+		border-top:2px solid rgb(0,0,0);
+		border-bottom:1px solid rgb(214,214,214);
+		margin:0 0 10px 20px;
+	}
+	#slide_title li
+	{
+		float:left;
+		width: 67px;
+		height: 37px;
+		border-right:1px solid rgb(214,214,214);
+		line-height:37px;
+		text-align:center;
+		font-family: 'Microsoft YaHei', 微软雅黑, 黑体;
+		font-size:16px;
+		background-color:rgb(225,225,225);
+	}
+	#slide_title li a
+	{
+		text-decoration:none;
+		color:rgb(0,0,0);
+	}
+	#slide_img
+	{
+		list-style-type: none;
+		width: 340px;
+		margin-left:20px;
+	}
+	#slide_img li
+	{
+		display:none;
+		width: 338px;
+		height:238px;
+		border:1px solid;
+	}
+	#arr
+	{
+		display:none;
+	}
+	.slide_arr_left
+	{
+		display:block;
+		position:absolute;
+		top:50%;
+		left:20px;
+		z-index:10;
+	}
+	.slide_arr_right
+	{
+		display:block;
+		position:absolute;
+		top:50%;
+		left:328px;
+		z-index:10;
+	}
+	</style>	
+</head>
+<body>
+	<div id="slide">
+		<ol id="slide_title" >
+			<li ><a href="#">热点</a></li>
+			<li><a href="#">独家</a></li>
+			<li><a href="#">百态</a></li>
+			<li><a href="#">军事</a></li>
+			<li style="border:none" ><a href="#">聚焦</a></li>
+		</ol>
+		<ul id="slide_img" onmouseover="autostop(),mouseover()" onmouseout="autostart(),mouseout()">
+			<li><a href="#"><img  src="C:/Users/123/Desktop/web homework/img1/img_1.jpg" alt="滑动图片"/></a></li>
+			<li ><a href="#"><img src="C:/Users/123/Desktop/web homework/img1/img_2.jpg" alt=""></a></li>
+			<li ><a href="#"><img src="C:/Users/123/Desktop/web homework/img1/img_3.jpg" alt=""></a></li>
+			<li ><a href="#"><img src="C:/Users/123/Desktop/web homework/img1/img_4.jpg" alt=""></a></li>
+			<li ><a href="#"><img src="C:/Users/123/Desktop/web homework/img1/img_5.jpg" alt=""></a></li>
+		</ul>
+		<div id="arr" >
+			<span class="slide_arr_left" >
+				<img src="C:/Users/123/Desktop/web homework/img1/arr_l.png" alt=""/>
+			</span>
+			<span class="slide_arr_right" >
+				<img src="C:/Users/123/Desktop/web homework/img1/arr_r.png" alt=""/>
+			</span>
+		</div>
+	</div>
+	<script>
+	var nav=document.getElementById('slide_img').getElementsByTagName('LI');
+	var cont=document.getElementById('slide_title').getElementsByTagName('LI');
+	var ar=document.getElementById('arr').getElementsByTagName('span');
+	
+	var j=-1;//位置
+
+	var move=function(flag)
+	{
+		if(!flag){
+			j++;
+			if(j>=nav.length){j=0;}
+		}else{
+			j--;
+			if(j<0){j=4;}
+		}
+		for(var i=0;i<nav.length;i++){
+			nav[i].style.display='';
+			cont[i].style.background='rgb(225,225,225)';
+		}
+		nav[j].style.display='block';
+		cont[j].style.background='rgb(255,255,255)'; 
+	}
+
+            move(false);
+
+           var autostart=function()
+	{
+		focusTimeHandler=setInterval( function(){
+			move(false);
+		},3000);
+	}
+
+	autostart();
+                                                    
+	for(var n=0;n<cont.length;n++)
+	{
+		cont[n].onmouseover=function(){
+			autostop();
+			for(var s=0;s<cont.length;s++){
+				if(this.innerText==cont[s].innerText){
+					j=s;
+				}
+			}
+			for(var i=0;i<nav.length;i++){
+				nav[i].style.display='';
+				cont[i].style.background='rgb(225,225,225)';
+			}
+			cont[j].style.background='rgb(255,255,255)';
+			nav[j].style.display='block';		
+		}
+	}
+
+	for(var i=0;i<cont.length;i++)
+	{
+		cont[i].onmouseout=function(){
+			for(var s=0;s<cont.length;s++){
+				if(this.innerText==cont[s].innerText){
+					autostart();
+				}
+			}
+										
+		}
+	}
+
+	ar[0].onmousedown=function()
+	{
+		move(true);
+	}
+
+	ar[1].onmousedown=function()
+	{
+		move(false);
+	}
+
+	function autostop()
+	{
+		clearInterval(focusTimeHandler);
+	}
+
+	var mouseover=function()
+	{
+		document.getElementById('arr').style.display='block';
+	}
+
+	var mouseout=function()
+	{
+		document.getElementById('arr').style.display='none';
+	}
+	
+	</script>
+</body>
